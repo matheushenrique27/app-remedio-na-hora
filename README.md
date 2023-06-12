@@ -1,25 +1,29 @@
 # Aplicativo Remédio Na Hora
-Esta aplicação é destinada a controlar horários de aplicação de remédios e outros fármacos.
+Esta aplicação é destinada a controlar horários de aplicação de remédios e outros fármacos, e foi inicialmente pensada como um projeto de conclusão para uma disciplina de desenvolvimento para dispositivos móveis da pós graduação residência em tecnologia da informação na área da saúde para a liga contra o câncer.
 
 ## Proposta do aplicativo
-A proposta desta aplicação é fornecer ao usuário a possibilidade de cadastrar remédios, administrar doses e criar lembretes de horários para administração de fármacos. 
+A proposta desta aplicação é fornecer ao usuário a possibilidade de cadastrar remédios, administrar doses e criar lembretes de horários para administração de fármacos, dando a oportunidade de controle e segurança nas administrações dos remédios. 
 
 ## Requisitos funcionais escolhidos
-Os principais requisitos funcionais escolhidos para esse projeto são:
-- Efetuar login no aplicativo;
-- Inserção de dados em formulários;
-- Edição de informações;
-- Agendar novos horários para administração de fármacos;
-- Consultar horários agendados para administração do remédio;
-- 
+Os oito principais requisitos funcionais escolhidos para esse projeto são:
+1. Efetuar login no aplicativo;
+2. Inserção de dados em formulários;
+3. Edição de informações essenciais;
+4. Agendar novos horários para administração de fármacos;
+5. Consultar horários agendados para administração do remédio;
+6. 
+7. 
+8. 
+Outros requisitos podem estar presentes na aplicação, porém, para esta seção, apenas esses foram listados.
 
 ## Componentes React Native utilizados
 A aplicação pa
-2. O app deve fazer extenso uso dos componentes React Native (Ex: Text, Button,
-View…) bem como de outras bibliotecas que o grupo julgar necessário (Ex: React
-Native Elements). Além disso, os componentes devem estar organizados, como
-estruturas de layout adequadas às propostas. Faça extenso uso dos recursos de
-estilização e personalização. (2,00)
+- Text;
+- Button;
+- View;
+- Input;
+- ScrollView;
+- 
 
 ## Recursos de navegação
 3. O app deve utilizar recursos de navegação: drawer ou tab e deve conter pelo menos 5
@@ -39,3 +43,9 @@ persistência dos dados deve ser local, utilize o SQLite (Expo SQLite).
 nativo do dispositivo (sensor biométrico, câmera, gps…). (2,00)
 
 ## Mapeamento do aplicativo
+As telas seguem um
+- Login
+  - Home
+  - 
+- Criar conta
+- Recuperar acesso
