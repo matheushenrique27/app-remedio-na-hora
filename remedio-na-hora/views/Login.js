@@ -1,6 +1,6 @@
-import { SafeAreaView, StatusBar, TextInput, ActivityIndicator } from "react-native";
+import { Text, View, SafeAreaView, StatusBar, TextInput, ActivityIndicator, Button } from "react-native";
 import UserController from '../api/userController';
-
+import { useState } from 'react';
 
 const Login = ({ navigation }) => {
 
@@ -13,7 +13,7 @@ const Login = ({ navigation }) => {
     const authUser = async () => {
         try {
             setLoading(true)
-            credentials = controller.authUser(login,passwd);
+            credentials = controller.authUser(login, passwd);
             if (credentials != null) {
                 navigation.navigate('Cadastro');
             }
@@ -35,7 +35,7 @@ const Login = ({ navigation }) => {
                     <Text>Senha</Text>
                     <TextInput placeholder="Infome sua Senha" secureTextEntry={true} value={passwd} onChangeText={(value) => { setPasswd(value) }}></TextInput>
                     <Button title="Login" onPress={authUser}></Button>
-                    <StatusBar style='auto'  />
+                    <StatusBar style='auto' />
                 </View>
             }
         </SafeAreaView>

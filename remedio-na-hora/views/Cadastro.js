@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Button, SafeAreaView, TextInput, View, ActivityIndicator } from "react-native";
+import { Text, Button, SafeAreaView, TextInput, View, ActivityIndicator } from "react-native";
 import UserController from '../api/userController';
-
 
 
 const Cadastro = ({ navigation }) => {
