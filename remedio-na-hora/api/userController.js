@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { firebase } from "./Firebase";
 
 class UserController {
 
