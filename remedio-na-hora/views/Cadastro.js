@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Text, Button, SafeAreaView, TextInput, View, ActivityIndicator } from "react-native";
+import { Text, Button, StyleSheet, SafeAreaView, TextInput, View, ActivityIndicator } from "react-native";
 import UserController from '../api/userController';
 
 
@@ -26,21 +26,39 @@ const Cadastro = ({ navigation }) => {
     }
 
     return (
-        <SafeAreaView>
+        <SafeAreaView style={styles.container}>
             {isLoading
                 ? <ActivityIndicator />
                 : <View>
                     <Text>Nome</Text>
-                    <TextInput placeholder="Informe seu E-mail" value={login} onChangeText={(value) => { setLogin(value) }}></TextInput>
+                    <TextInput style={styles.input} placeholder="Informe seu E-mail" value={login} onChangeText={(value) => { setLogin(value) }}></TextInput>
                     <Text>Senha</Text>
-                    <TextInput placeholder="Informe sua Senha" value={passwd} onChangeText={(value) => { setPasswd(value) }}></TextInput>
+                    <TextInput style={styles.input} placeholder="Informe sua Senha" value={passwd} onChangeText={(value) => { setPasswd(value) }}></TextInput>
                     <Text>CPF</Text>
-                    <TextInput placeholder="Informe seu CPF" value={cpf} onChangeText={(value) => { setCpf(value) }}></TextInput>
+                    <TextInput style={styles.input} placeholder="Informe seu CPF" value={cpf} onChangeText={(value) => { setCpf(value) }}></TextInput>
                     <Button title="Cadastrar" onProgress={cadastro}></Button>
                 </View>
             }
         </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flexDirection: 'column',
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '100%',
+    },
+    input: {
+        padding: 10,
+        margin: 10,
+        borderolor: 'black',
+        borderWidth: 1,
+        width: '80%',
+    }
+});
 
 export { Cadastro }

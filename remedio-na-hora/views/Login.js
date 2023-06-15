@@ -1,4 +1,4 @@
-import { Text, View, SafeAreaView, StatusBar, TextInput, ActivityIndicator, Button } from "react-native";
+import { Text, View, StyleSheet, SafeAreaView, StatusBar, TextInput, ActivityIndicator, Button } from "react-native";
 import UserController from '../api/userController';
 import { useState } from 'react';
 
@@ -26,14 +26,14 @@ const Login = ({ navigation }) => {
 
 
     return (
-        <SafeAreaView>
+        <SafeAreaView style={styles.container}>
             {isLoading
                 ? <ActivityIndicator />
                 : <View>
                     <Text>Login</Text>
-                    <TextInput placeholder="Infome seu E-mail" value={login} onChangeText={(value) => { setLogin(value) }}></TextInput>
+                    <TextInput style={styles.input} placeholder="Infome seu E-mail" value={login} onChangeText={(value) => { setLogin(value) }}></TextInput>
                     <Text>Senha</Text>
-                    <TextInput placeholder="Infome sua Senha" secureTextEntry={true} value={passwd} onChangeText={(value) => { setPasswd(value) }}></TextInput>
+                    <TextInput style={styles.input} placeholder="Infome sua Senha" secureTextEntry={true} value={passwd} onChangeText={(value) => { setPasswd(value) }}></TextInput>
                     <Button title="Login" onPress={authUser}></Button>
                     <StatusBar style='auto' />
                 </View>
@@ -41,5 +41,23 @@ const Login = ({ navigation }) => {
         </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flexDirection: 'column',
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '100%',
+    },
+    input: {
+        padding: 10,
+        margin: 10,
+        borderolor: 'black',
+        borderWidth: 1,
+        width: '80%',
+    }
+});
 
 export { Login }

@@ -9,11 +9,11 @@ Os oito principais requisitos funcionais escolhidos para esse projeto são:
 1. Efetuar login no aplicativo;
 2. Inserção de dados em formulários;
 3. Edição de informações essenciais;
-4. Agendar novos horários para administração de fármacos;
+4. Agendar novos horários para administração de medicamentos;
 5. Consultar horários agendados para administração do remédio;
-6. 
-7. 
-8. 
+6. Adicionar foto do médicamento;
+7. Listar médicamentos já cadastrados;
+8. Adicionar novos fármacos;
 Outros requisitos podem estar presentes na aplicação, porém, para esta seção, apenas esses foram listados.
 
 ## Componentes React Native utilizados
@@ -23,7 +23,7 @@ A aplicação pa
 - View;
 - Input;
 - ScrollView;
-- 
+- SafeAreaView;
 
 ## Recursos de navegação
 3. O app deve utilizar recursos de navegação: drawer ou tab e deve conter pelo menos 5
@@ -46,6 +46,8 @@ nativo do dispositivo (sensor biométrico, câmera, gps…). (2,00)
 As telas seguem um
 - Login
   - Home
-  - 
+    - Perfil
+  - Cadastro/edição de medicamentos
+  - Listar medicamentos
 - Criar conta
 - Recuperar acesso
