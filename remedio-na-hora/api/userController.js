@@ -1,28 +1,22 @@
 import { Component } from "react";
 import { firebase } from "./Firebase";
+import { error } from "console";
 
 class UserController {
 
     cadastrorUser = async (login, passwd, cpf) => {
         try {
-            const uri = ''
-            const response = await fetch(uri, {
-                method: 'POST',
-                headers: {
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer ' + route.params.credentials.token,
-
-                },
-                body: JSON.stringify({
-                    email: login,
-                    cpf: cpf,
-                    passwd: passwd
-                })
-            });
-            console.log(response.status);
-            const newClient = await response.json();
-            console.log(newClient);
+            const user = firebase.firestore().collectoin('user');
+            const data = {
+                email: login,
+                cpf: cpf,
+                passwd: passwd
+            };
+            user
+                .add(data)
+                .catch((error)=>{
+                    alert(error);
+                });
         } catch (error) {
             console.error(error);
         }
