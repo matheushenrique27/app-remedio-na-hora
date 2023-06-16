@@ -1,12 +1,10 @@
-import { Component } from "react";
-import { firebase } from "./Firebase";
-import { error } from "console";
+import { db } from "./Firebase";
 
 class UserController {
 
     cadastrorUser = async (login, passwd, cpf) => {
         try {
-            const user = firebase.firestore().collectoin('user');
+            const user = db.firestore().collectoin('user');
             const data = {
                 email: login,
                 cpf: cpf,
